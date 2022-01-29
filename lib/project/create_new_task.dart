@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'colors.dart';
 import 'package:intl/intl.dart';
 
+import 'drawer.dart';
+
 MyColor myColor = MyColor();
 MyFont myFont = MyFont();
 
@@ -329,7 +331,7 @@ class _CreateNewTaskState extends State<CreateNewTask> {
                 onPressed: () {},
                 child: const Padding(
                   padding: EdgeInsets.all(18.0),
-                  child: const Text(
+                  child: Text(
                     'Create Task',
                     style: TextStyle(fontSize: 20),
                   ),
@@ -340,7 +342,7 @@ class _CreateNewTaskState extends State<CreateNewTask> {
           ],
         ),
       ),
-      drawer: const Drawer(),
+      drawer: const MyDrawer(),
     );
   }
 
