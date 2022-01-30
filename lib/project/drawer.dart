@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:todolist/project/create_new_task.dart';
 import 'package:todolist/project/home_screen.dart';
+import 'package:todolist/project/settings_view.dart';
 
 import 'all_users.dart';
 
@@ -28,17 +29,17 @@ class MyDrawer extends StatelessWidget {
           ),
           child: Text(''),
         ),
-        ListTile(
-          leading: const Icon(Icons.home),
-          title: const Text('Home'),
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const HomeScreen(),
-              ),
-            );
-          },
+        const ListTile(
+          leading: Icon(Icons.home),
+          title: Text('Home'),
+          // onTap: () {
+          //   Navigator.push(
+          //     context,
+          //     MaterialPageRoute(
+          //       builder: (context) => const HomeScreen(),
+          //     ),
+          //   );
+          // },
         ),
         ListTile(
           leading: const Icon(Icons.group),
@@ -62,6 +63,13 @@ class MyDrawer extends StatelessWidget {
                 builder: (context) => const CreateNewTask(),
               ),
             );
+          },
+        ),
+        ListTile(
+          leading: const Icon(Icons.color_lens),
+          title: const Text('Change Theme'),
+          onTap: () {
+            Navigator.restorablePushNamed(context, SettingsView.routeName);
           },
         ),
       ],

@@ -27,6 +27,7 @@ class UserProfile extends StatelessWidget {
     double w = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         backgroundColor: const Color(0xFFF9BE7C),
         leading: Padding(
           padding: const EdgeInsets.all(12.0),
@@ -34,14 +35,15 @@ class UserProfile extends StatelessWidget {
             builder: (BuildContext context) {
               return GestureDetector(
                 onTap: () => Scaffold.of(context).openDrawer(),
-                child: Image.asset('assets/img/menu_icon.png'),
+                child: const Icon(Icons.format_align_left, color: Color(0xFF0D243E),),
               );
             },
           ),
         ),
       ),
       body: SingleChildScrollView(
-        child: Column(
+        child: Stack(children: [
+          Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Container(
@@ -70,6 +72,7 @@ class UserProfile extends StatelessWidget {
             UserDetails(userid: userid, username: username, useremail: useremail),
           ],
         ),
+        ],),
       ),
       drawer: const MyDrawer(),
     );
