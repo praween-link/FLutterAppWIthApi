@@ -2,6 +2,8 @@
 
 A new Flutter project.
 
+<img src="screensorts/1.png" width="270" /> <img src="screensorts/2.png" width="270" /> <img src="screensorts/3.png" width="270" /> <img src="screensorts/4.png" width="270" /> <img src="screensorts/5.png" width="270" /> <img src="screensorts/6.png" width="270" /> <img src="screensorts/7.png" width="270" /> <img src="screensorts/8.png" width="270" /> <img src="screensorts/9.png" width="270" /> <img src="screensorts/10.png" width="270" />
+
 ## Getting Started
 
 This project is a starting point for a Flutter application that follows the
