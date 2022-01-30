@@ -8,4 +8,20 @@ class L10n {
     const Locale('es'),
     const Locale('de'),
   ];
+
+  static String getFlag(String code) {
+    switch (code) {
+      case 'ar':
+        return '🇦🇪';
+      case 'hi':
+        return '🇮🇳';
+      case 'es':
+        return '🇪🇸';
+      case 'de':
+        return '🇩🇪';
+      case 'en':
+      default:
+        return '🇺🇸';
+    }
+  }
 }
